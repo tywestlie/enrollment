@@ -11,7 +11,7 @@ describe 'user visits a student edit page' do
 
     click_on 'Update Student'
 
-    expect(current_path).to eq(student_path(student))
+    expect(current_path).to eq(students_path)
     expect(page).to have_content(new_name)
   end
 end
