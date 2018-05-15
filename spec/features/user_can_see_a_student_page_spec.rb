@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 describe 'user visits a student show page' do
-  xit 'can see a page with a student' do
-    visit student_path
+  it 'can see a page with a student' do
+    student = Student.create!(name: 'Jimmy')
+    visit student_path(student)
 
-    expect(page).to have_content('Jimmy')
+    expect(page).to have_content(student.name)
   end
 end
