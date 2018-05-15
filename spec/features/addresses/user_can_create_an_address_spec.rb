@@ -9,7 +9,7 @@ describe 'user visits addres new page' do
     state = 'Colorado'
     zip = 12345
 
-    visit new_address_path(student)
+    visit new_student_address_path(student)
 
     fill_in :address_description, with: description
     fill_in :address_street, with: street
